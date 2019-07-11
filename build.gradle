@@ -9,6 +9,7 @@ plugins {
     id "eclipse"
     id "idea"
     id "maven"
+    id "jacoco"
 }
 
 group = "com.vamonossoftware"
@@ -57,6 +58,7 @@ dependencies {
 
 test {
     useJUnitPlatform() // required for junit 5
+    finalizedBy jacocoTestReport
 }
 
 idea {
